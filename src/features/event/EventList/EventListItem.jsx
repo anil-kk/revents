@@ -1,14 +1,19 @@
-import React, { Component } from 'react'
-import { Segment, Item, Icon, List, Button } from 'semantic-ui-react';
+import React, { Component } from "react";
+import { Segment, Item, Icon, List, Button } from "semantic-ui-react";
+import EventListAtendee from "./EventListAtendee";
 
 class EventListItem extends Component {
   render() {
     return (
-     <Segment.Group>
+      <Segment.Group>
         <Segment>
           <Item.Group>
             <Item>
-              <Item.Image size="tiny" circular src="" />
+              <Item.Image
+                size="tiny"
+                circular
+                src="https://randomuser.me/api/portraits/women/42.jpg"
+              />
               <Item.Content>
                 <Item.Header as="a">Event Title</Item.Header>
                 <Item.Description>
@@ -20,21 +25,24 @@ class EventListItem extends Component {
         </Segment>
         <Segment>
           <span>
-            <Icon name="clock" /> date |
-            <Icon name="marker" /> time
+            <Icon name="clock" /> date |<Icon name="marker" /> time
           </span>
         </Segment>
         <Segment secondary>
           <List horizontal>
-            {/* todo: attendees go here */}
+            <EventListAtendee />
+            <EventListAtendee />
+            <EventListAtendee />
+            <EventListAtendee />
           </List>
         </Segment>
         <Segment clearing>
+        <span>More details will be presented here</span>
           <Button as="a" color="teal" floated="right" content="View" />
         </Segment>
       </Segment.Group>
-    )
+    );
   }
 }
 
-export default  EventListItem
+export default EventListItem;

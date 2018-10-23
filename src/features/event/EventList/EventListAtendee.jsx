@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
+import {List, Image} from 'semantic-ui-react';
 
 class EventListAtendee extends Component {
   render() {
     return (
-      <div>
-          <h1>Event List Atendee</h1>
+      <List.Item>
+         <Image as='a' size='mini' circular src='https://randomuser.me/api/portraits/women/42.jpg' />
         
-      </div>
+      </List.Item>
     )
   }
 }
